@@ -1,5 +1,8 @@
 #include <Wire.h>
 #include <TEA5767Radio.h>
+#include<LiquidCrystal.h>
+const int D4 = 4, D5 = 5, D6 = 6, D7 = 7, RS = 12, E = 11;
+LiquidCrystal lcd(RS, E, D4, D5, D6, D7);
 
 const int pot1Pin = A0;  
 const int pot2Pin = A1;  
@@ -7,7 +10,10 @@ const int pot2Pin = A1;
 TEA5767Radio radio = TEA5767Radio();
 void setup() {
   Serial.begin(9600); 
-    Wire.begin();
+  Wire.begin();
+  
+  lcd.begin(16, 2);
+
 }
 
 void loop() {
@@ -32,5 +38,8 @@ void loop() {
 
 
   radio.setFrequency(finalValue);
-}
+ 
+  lcd.setCursor(0, 0);
+  lcd.print(finalValue);
 
+}
