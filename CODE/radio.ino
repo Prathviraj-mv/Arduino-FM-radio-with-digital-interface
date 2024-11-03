@@ -6,7 +6,7 @@ const int pot2Pin = A1;
 
 TEA5767Radio radio = TEA5767Radio();
 float lastFrequency = 0.0;  
-const float threshold = 0.1;  
+const float threshold = 0.05;  
 
 void setup() {
   Serial.begin(2000000); 
@@ -29,5 +29,4 @@ void loop() {
     lastFrequency = finalValue;  
   }
 
-  delay(100);  
 }
