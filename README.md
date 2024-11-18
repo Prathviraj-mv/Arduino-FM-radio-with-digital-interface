@@ -2,7 +2,7 @@
 Arduino FM RADIO using TEA5767 module
 # Circuit :
 <p>
-  <img width=80% src="IMAGES/IMG_20241118_225016.jpg">
+  <img width=100% src="IMAGES/IMG_20241118_225016.jpg">
 </p>
 
 # Final image (with 3d printed parts)
